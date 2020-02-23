@@ -18,17 +18,20 @@
             <div class="toolbar-container">
                 <p id="toolbar-label">Marking Tools</p>
                 <div class="toolbar-buttons">
-                    <button id="interesting-button">Interesting</button>
-                    <button id="uninteresting-button">Uninteresting</button>
+                    <button id="interesting-button" onclick="drawRectangle('Interesting')">Interesting</button>
+                    <button id="uninteresting-button" onclick="drawRectangle('Uninteresting')">Uninteresting</button>
                 </div>
             </div>
-            <div class="canvas">
+            <div class="canvas-title">
                 <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" >
                 <p><label for="file" style="cursor: pointer;">Click to Upload an Image</label></p>
-                <img id="input-image"/>
+            </div>
+            <div class="canvas-container">
+                <canvas id="canvas"></canvas>
             </div>
             <div class="output-container">
-                <button id="output-button">JSON Output</button>
+                <button id="output-button" onclick="outputJSON()">JSON Output</button>
+                <p id="outputJSONFormat"></p>
             </div>
         
         <script src="ImageAnnotationTool.js"></script>

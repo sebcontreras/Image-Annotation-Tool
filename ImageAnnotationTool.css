@@ -25,29 +25,36 @@ button {
     margin: 10px;
 }
 
+canvas {
+    position: relative;
+}
+
+button:hover {
+    opacity: 0.5;
+}
+
 .title-container {
-    width: 80%;
+    width: 90%;
     display: flex;
     flex: row wrap;
     flex-grow: 2;
     margin: 15px;
     border-radius: 5px;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
-    background-color: blueviolet;
 }
 
 #title-label {
     color: white;
-    font-size: 2.5em;
-    max-height: 80px;
+    font-size: 4.0vw;
     flex: 2 1 20%;
 }
 
 #MEDO-logo {
+    max-width: 20%;
     padding: 10px;
-    flex: 0 0;
-    max-height: 80px;
+    flex: 2 1;
+    height: auto;
 }
 
 .toolbar-container {
@@ -68,33 +75,44 @@ button {
 }
 
 .toolbar-buttons {
-    width: 40%;
+    width: 70%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    font-size: 150%;
 }
 
 #interesting-button {
     flex-grow: 1;
-    width: 10%;
+    width: 5%;
+    min-width: 200px;
     background-color: green;
     color: white;
-    font-size: inherit;
+    font-size: 2vw;
 }
 
 #uninteresting-button {
     flex-grow: 1;
-    width: 8%;
+    width: 5%;
+    min-width: 200px;
     background-color: red;
     color: white;
-    font-size: inherit;
+    font-size: 2vw;
 }
 
-.canvas {
-    width: 80%;
+.canvas-container {
+    width: 75%;
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    flex-grow: 5;
+    background-color: white;
+}
+
+.canvas-title {
+    width: 30%;
     margin: 15px;
-    min-height: 300px;
+    min-height: 10%;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -107,6 +125,10 @@ button {
 #file {
     display: none;
     background-color: red;
+}
+
+label:hover {
+    opacity: 0.5;
 }
 
 #input-image {
@@ -123,13 +145,18 @@ button {
     margin: 15px;
     flex-grow: 1;
     justify-content: flex-end;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     width: 80%;
 }
 
 #output-button {
-    width: 20%;
+    width: 15%;
+    align-self: flex-end;
     background-color: rgb(71, 71, 70);
     color: white;
-    font-size: 1.5em;
+    font-size: 2vw;
+}
+
+#outputJSONFormat {
+    background-color: white;
 }
