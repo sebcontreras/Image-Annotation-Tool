@@ -34,7 +34,6 @@ var loadFile = function (event) {
     var fileInput = document.getElementById('file');
     var fileName = fileInput.value.split(/(\\|\/)/g).pop();
     var image = new Image;
-    //newImageClearAll(canvas, ctx);
     output = new DesiredOutputFormat(fileName);
     image.onload = drawImageActualSize;
     image.src = URL.createObjectURL(event.target.files[0]);
@@ -98,7 +97,7 @@ function mouseDown(ev) {
         dragBR = true;
     }
     else {
-        // handle not resizing
+        //no resizing
     }
     draw();
 }
