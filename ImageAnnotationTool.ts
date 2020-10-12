@@ -70,7 +70,7 @@ var loadFile = function(event) {
     image.onload = drawImageActualSize; 
     
     image.src = URL.createObjectURL(event.target.files[0]);
-    function drawImageActualSize() {
+    function drawImageActualSize() { 
         canvas.style.width='100%';
         canvas.width = this.naturalWidth;
         canvas.height=this.naturalHeight;

@@ -1,40 +1,47 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        
-        <link rel="stylesheet" href="ImageAnnotationTool.css" type="text/css">
-        <title>Image Annotation Tool</title>
-    
-        <script></script>
-        <style></style>
 
-    </head>
-    <body>
-            
-            <div class="title-container">
-                <h1 id="title-label">Image Annotation Tool</h1>
-                <img src="MEDO.ai.logo.png" id="MEDO-logo">
-            </div>
-            <div class="toolbar-container">
-                <p id="toolbar-label">Marking Tools</p>
-                <div class="toolbar-buttons">
-                    <button id="interesting-button" onclick="drawRectangle('Interesting')">Interesting</button>
-                    <button id="uninteresting-button" onclick="drawRectangle('Uninteresting')">Uninteresting</button>
-                </div>
-            </div>
-            <div class="canvas-title">
-                <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" >
-                <p><label for="file" style="cursor: pointer;">Click to Upload an Image</label></p>
-            </div>
-            <div class="canvas-container">
-                <canvas id="canvas"></canvas>
-            </div>
-            <div class="output-container">
-                <button id="output-button" onclick="outputJSON()">JSON Output</button>
-                <p id="outputJSONFormat"></p>
-            </div>
-        
-        <script src="ImageAnnotationTool.js"></script>
+<head>
 
-    </body>
+    <link rel="stylesheet" href="ImageAnnotationTool.css" type="text/css">
+    <title>Image Annotation Tool</title>
+
+    <script></script>
+    <style></style>
+
+</head>
+
+<body>
+
+    <div class="title-container">
+        <div class="SC-logo-box">
+            <img src="SC-logo.png" id="MEDO-logo">
+        </div>
+        <div class="title-box">
+            <h1 id="title-label">Image Annotation Tool</h1>
+        </div>
+    </div>
+    <div class="toolbar-container">
+        <p id="toolbar-label">Marking Tools</p>
+        <div class="toolbar-buttons">
+            <button id="interesting-button" onclick="drawRectangle('Interesting')">Interesting</button>
+            <button id="uninteresting-button" onclick="drawRectangle('Uninteresting')">Uninteresting</button>
+        </div>
+    </div>
+    <div class="canvas-title">
+        <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)">
+        <p><label for="file" style="cursor: pointer;">Click to Upload an Image</label></p>
+    </div>
+    <div class="canvas-container">
+        <canvas id="canvas"></canvas>
+    </div>
+    <div class="output-container">
+        <button id="output-button" onclick="outputJSON()">JSON Output</button>
+        <p id="outputJSONFormat"></p>
+    </div>
+
+    <script src="ImageAnnotationTool.js"></script>
+
+</body>
+
 </html>
